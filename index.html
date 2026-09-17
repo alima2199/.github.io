@@ -5,12 +5,389 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CozyMarketz - Warmth & Comfort</title>
     
-    <!-- 1. LINK TO YOUR CSS FILE HERE -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- ==========================================
+         ALL CSS STYLES INCLUDED BELOW
+         ========================================== -->
+    <style>
+        /* 1. CSS Variables & Theme */
+        :root {
+            --bg-color: #FAF6F0;
+            --card-bg: #F4EBE1;
+            --accent-color: #D4A373;
+            --accent-hover: #BC8A5F;
+            --text-color: #4A3E3D;
+            --muted-color: #8C7A6B;
+            --white: #FFFFFF;
+            --font-serif: Georgia, 'Times New Roman', serif;
+            --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            --radius-lg: 1.5rem;
+            --radius-md: 1rem;
+            --radius-full: 9999px;
+            --transition: all 0.2s ease-in-out;
+        }
+
+        /* 2. Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* 3. Header & Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(250, 246, 240, 0.85);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--card-bg);
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .logo span {
+            color: var(--text-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        /* 4. Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--card-bg);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+
+        /* 5. Hero Section */
+        .hero {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr 1fr;
+                padding: 6rem 1.5rem;
+            }
+        }
+
+        .hero-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--muted-color);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.25rem;
+            }
+        }
+
+        .hero-text {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            width: 100%;
+            height: 350px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 6. Featured Products Section */
+        .featured-section {
+            background-color: rgba(244, 235, 225, 0.4);
+            padding: 5rem 1.5rem;
+            border-top: 1px solid var(--card-bg);
+            border-bottom: 1px solid var(--card-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--muted-color);
+        }
+
+        .product-grid {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-img-container {
+            height: 240px;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .product-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-name {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-desc {
+            color: var(--muted-color);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-weight: bold;
+        }
+
+        /* 7. About Section */
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .about-section p {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* 8. Newsletter Section */
+        .newsletter-section {
+            background-color: rgba(212, 163, 115, 0.1);
+            padding: 4rem 1.5rem;
+            border-top: 1px solid var(--card-bg);
+        }
+
+        .newsletter-container {
+            max-width: 550px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 500px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+
+        .newsletter-input {
+            flex-grow: 1;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--card-bg);
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        /* 9. Footer */
+        .footer {
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--card-bg);
+            padding: 2rem 1.5rem;
+            font-size: 0.8rem;
+            color: var(--muted-color);
+        }
+
+        .footer-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 10. Scroll Animation Styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header / Navigation -->
     <header class="header">
         <div class="nav-container">
             <a href="#" class="logo">CozyMarketz<span>.</span></a>
@@ -33,13 +410,13 @@
                     <a href="#featured" class="btn btn-primary">Explore Collection</a>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
+            <div class="hero-image-wrapper animate-on-scroll">
                 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cozy Home Decor">
             </div>
         </section>
 
         <!-- Featured Products Section -->
-        <section id="featured" class="featured-section">
+        <section id="featured" class="featured-section animate-on-scroll">
             <div class="section-header">
                 <h2 class="section-title">Featured Favorites</h2>
                 <p class="section-subtitle">Handpicked items to help you unwind.</p>
@@ -47,37 +424,110 @@
 
             <div class="product-grid">
                 <!-- Product 1 -->
-                <div class="product-card">
+                <div class="product-card animate-on-scroll">
                     <div class="product-img-container">
-                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" alt="Candle">
+                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" alt="Scented Candle">
                     </div>
                     <h3 class="product-name">Scented Soy Candle</h3>
                     <p class="product-desc">Vanilla & Amber</p>
                     <div class="product-footer">
                         <span class="product-price">$24.00</span>
-                        <!-- 2. ONCLICK JAVASCRIPT CODE HERE -->
                         <button class="btn btn-primary btn-sm" onclick="addToCart('Scented Soy Candle')">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="product-card">
+                <div class="product-card animate-on-scroll">
                     <div class="product-img-container">
-                        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=500&q=80" alt="Blanket">
+                        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=500&q=80" alt="Chunky Blanket">
                     </div>
                     <h3 class="product-name">Chunky Knit Blanket</h3>
                     <p class="product-desc">Ultra-soft cotton</p>
                     <div class="product-footer">
                         <span class="product-price">$68.00</span>
-                        <!-- ONCLICK JAVASCRIPT CODE -->
                         <button class="btn btn-primary btn-sm" onclick="addToCart('Chunky Knit Blanket')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Ceramic Mug">
+                    </div>
+                    <h3 class="product-name">Artisan Ceramic Mug</h3>
+                    <p class="product-desc">Handmade pottery</p>
+                    <div class="product-footer">
+                        <span class="product-price">$18.00</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Artisan Ceramic Mug')">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section animate-on-scroll">
+            <h2 class="section-title">About CozyMarketz</h2>
+            <p>At CozyMarketz, we believe that home should be a sanctuary of peace, warmth, and comfort. We carefully curate sustainable, beautifully designed essentials that elevate your quiet everyday moments.</p>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section animate-on-scroll">
+            <div class="newsletter-container">
+                <h3 class="section-title">Join the Cozy Club</h3>
+                <p class="section-subtitle">Subscribe for updates and 10% off your first order.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <!-- 3. LINK TO YOUR JAVASCRIPT FILE HERE (Right before </body>) -->
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 CozyMarketz. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         ALL JAVASCRIPT INCLUDED BELOW
+         ========================================== -->
+    <script>
+        // 1. Shopping Cart Counter
+        let count = 0;
+
+        function addToCart(itemName) {
+            count = count + 1;
+            const cartCounter = document.getElementById('cart-count');
+            if (cartCounter) {
+                cartCounter.innerText = count;
+            }
+            alert(itemName + " added to your cart!");
+        }
+
+        // 2. Scroll Animations Engine
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.15 // Triggers when 15% of the element is in view
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
