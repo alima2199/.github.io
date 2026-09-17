@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COZY CLOUT — Main Character Energy</title>
+    <title>COZY CLOUT ✦ MAIN CHARACTER ARCHIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Ambient Mesh Background Glows -->
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+
     <!-- Marquee Banner -->
     <div class="marquee-banner">
-        <span>⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡ FREE SHIPPING OVER $100 ⚡ MAIN CHARACTER VIBES ONLY ⚡</span>
+        <div class="marquee-track">
+            <span>⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡ FREE SHIPPING OVER $100 ⚡ MAIN CHARACTER VIBES ONLY ⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡</span>
+        </div>
     </div>
 
     <!-- Header & Navigation -->
     <header class="header">
         <div class="nav-container">
-            <a href="#" class="logo">COZY<span>CLOUT</span> ✦</a>
+            <a href="#" class="logo">COZY<span>CLOUT</span> <span class="sparkle">✦</span></a>
             <ul class="nav-links">
-                <li><a href="#shop">The Drops</a></li>
-                <li><a href="#vibe">Vibe Check</a></li>
+                <li><a href="#shop" class="nav-item">The Drops</a></li>
+                <li><a href="#vibe" class="nav-item">Vibe Check</a></li>
                 <li>
-                    <button class="btn btn-outline btn-sm" onclick="toggleCart(true)">
-                        Bag 🛒 (<span id="cart-count">0</span>)
+                    <button class="btn btn-glass btn-sm cart-btn" onclick="toggleCart(true)">
+                        <span>BAG 🛒</span>
+                        <span id="cart-count" class="cart-badge">0</span>
                     </button>
                 </li>
             </ul>
@@ -31,88 +41,125 @@
 
     <!-- Hero Section -->
     <section class="hero animate-on-scroll">
-        <div>
-            <div class="pill-tag">✨ Vibe Level: Unmatched</div>
-            <h1 class="hero-title">Fits That Hit Different. Period.</h1>
-            <p class="hero-text">Zero skip, maximum clout. Upgrade your daily rotation with cozy essentials built for the main character.</p>
-            <div style="display: flex; gap: 1rem; align-items: center;">
-                <a href="#shop" class="btn btn-primary">Secure the Drip ➔</a>
-                <span style="font-size: 0.85rem; color: var(--muted-color); font-weight: bold;">🔥 1.4k copped today</span>
+        <div class="hero-content">
+            <div class="pill-tag">
+                <span class="pulse-dot"></span>
+                <span>Vibe Level: Unmatched</span>
+            </div>
+            <h1 class="hero-title">FITS THAT HIT DIFFERENT.<br><span class="text-gradient">PERIOD.</span></h1>
+            <p class="hero-text">Zero skip, maximum clout. Upgrade your daily rotation with hyper-curated cozy essentials built strictly for the main character energy.</p>
+            <div class="hero-actions">
+                <a href="#shop" class="btn btn-primary btn-glow">
+                    <span>Secure the Drip</span>
+                    <span class="arrow">➔</span>
+                </a>
+                <div class="clout-proof">
+                    <div class="avatar-stack">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="user">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="user">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="user">
+                    </div>
+                    <span>🔥 <strong>1.4k</strong> copped today</span>
+                </div>
             </div>
         </div>
         <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Hero Fit">
+            <div class="hero-card-glow"></div>
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Hero Fit" class="hero-img">
+            <div class="floating-tag">
+                <span>NEW ARCHIVE DROP</span>
+                <strong>FW/26 BATCH 01</strong>
+            </div>
         </div>
     </section>
 
     <!-- Products Grid Section -->
     <section id="shop" class="featured-section">
         <div class="section-header animate-on-scroll">
-            <h2 class="section-title">The Latest Drop 💀🔥</h2>
-            <p style="color: var(--muted-color); font-size: 0.95rem;">High key essential. Low key timeless.</p>
+            <div class="pill-tag small">LIMITED QUANTITIES</div>
+            <h2 class="section-title">THE LATEST DROP <span class="emoji-glow">💀🔥</span></h2>
+            <p class="section-subtitle">High key essential. Low key timeless.</p>
         </div>
 
         <div class="product-grid">
             <!-- Product Card 1 -->
             <div class="product-card animate-on-scroll">
-                <span class="badge">TRENDING ⚡</span>
+                <div class="card-glass-layer"></div>
+                <span class="badge badge-neon">TRENDING ⚡</span>
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit — Essential Heavy Knit')">
                     <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Oversized Cable Knit">
+                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit — Essential Heavy Knit')">Oversized Knit Sweater</h3>
-                <p class="product-desc">Heavyweight textured knit. Ultimate comfort energy.</p>
-                
-                <div class="size-selector">
-                    <button class="size-btn active" onclick="selectSize(this)">S</button>
-                    <button class="size-btn" onclick="selectSize(this)">M</button>
-                    <button class="size-btn" onclick="selectSize(this)">L</button>
-                </div>
+                <div class="product-info">
+                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit — Essential Heavy Knit')">Oversized Knit Sweater</h3>
+                    <p class="product-desc">Heavyweight textured knit. Ultimate cozy comfort energy.</p>
+                    
+                    <div class="size-selector">
+                        <button class="size-btn active" onclick="selectSize(this)">S</button>
+                        <button class="size-btn" onclick="selectSize(this)">M</button>
+                        <button class="size-btn" onclick="selectSize(this)">L</button>
+                    </div>
 
-                <div class="product-footer">
-                    <span style="font-weight: 800; font-size: 1.2rem;">$85.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Oversized Knit Sweater', 85.00, 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
+                    <div class="product-footer">
+                        <div class="price-tag"><span class="currency">$</span>85.00</div>
+                        <button class="btn btn-primary btn-sm btn-icon" onclick="addToCart('Oversized Knit Sweater', 85.00, 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', this)">
+                            <span>COP NOW 🛒</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <!-- Product Card 2 -->
             <div class="product-card animate-on-scroll">
-                <span class="badge" style="background: var(--text-color); color: var(--bg-color);">BESTSELLER 👑</span>
+                <div class="card-glass-layer"></div>
+                <span class="badge badge-dark">BESTSELLER 👑</span>
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Boxy Heavyweight Hoodie — Organic Fleece')">
                     <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Boxy Heavyweight Hoodie">
+                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Boxy Heavyweight Hoodie — Organic Fleece')">Boxy Fleece Hoodie</h3>
-                <p class="product-desc">450GSM organic fleece. No hood string, pure minimal aesthetic.</p>
-                
-                <div class="size-selector">
-                    <button class="size-btn active" onclick="selectSize(this)">S</button>
-                    <button class="size-btn" onclick="selectSize(this)">M</button>
-                    <button class="size-btn" onclick="selectSize(this)">L</button>
-                </div>
+                <div class="product-info">
+                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Boxy Heavyweight Hoodie — Organic Fleece')">Boxy Fleece Hoodie</h3>
+                    <p class="product-desc">450GSM organic fleece. No hood string, pure minimal silhouette.</p>
+                    
+                    <div class="size-selector">
+                        <button class="size-btn active" onclick="selectSize(this)">S</button>
+                        <button class="size-btn" onclick="selectSize(this)">M</button>
+                        <button class="size-btn" onclick="selectSize(this)">L</button>
+                    </div>
 
-                <div class="product-footer">
-                    <span style="font-weight: 800; font-size: 1.2rem;">$62.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Boxy Fleece Hoodie', 62.00, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
+                    <div class="product-footer">
+                        <div class="price-tag"><span class="currency">$</span>62.00</div>
+                        <button class="btn btn-primary btn-sm btn-icon" onclick="addToCart('Boxy Fleece Hoodie', 62.00, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', this)">
+                            <span>COP NOW 🛒</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <!-- Product Card 3 -->
             <div class="product-card animate-on-scroll">
-                <span class="badge" style="background: #e74c3c; color: white;">SELLING FAST ⏳</span>
+                <div class="card-glass-layer"></div>
+                <span class="badge badge-red">SELLING FAST ⏳</span>
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee — Vintage Wash')">
                     <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Drop-Shoulder Heavy Tee">
+                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee — Vintage Wash')">Drop-Shoulder Tee</h3>
-                <p class="product-desc">Vintage wash oversized tee. Laid back vibes only.</p>
-                
-                <div class="size-selector">
-                    <button class="size-btn active" onclick="selectSize(this)">S</button>
-                    <button class="size-btn" onclick="selectSize(this)">M</button>
-                    <button class="size-btn" onclick="selectSize(this)">L</button>
-                </div>
+                <div class="product-info">
+                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee — Vintage Wash')">Drop-Shoulder Tee</h3>
+                    <p class="product-desc">Vintage washed heavyweight cotton. Laid-back aesthetic fit.</p>
+                    
+                    <div class="size-selector">
+                        <button class="size-btn active" onclick="selectSize(this)">S</button>
+                        <button class="size-btn" onclick="selectSize(this)">M</button>
+                        <button class="size-btn" onclick="selectSize(this)">L</button>
+                    </div>
 
-                <div class="product-footer">
-                    <span style="font-weight: 800; font-size: 1.2rem;">$38.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Drop-Shoulder Tee', 38.00, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
+                    <div class="product-footer">
+                        <div class="price-tag"><span class="currency">$</span>38.00</div>
+                        <button class="btn btn-primary btn-sm btn-icon" onclick="addToCart('Drop-Shoulder Tee', 38.00, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', this)">
+                            <span>COP NOW 🛒</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,7 +169,7 @@
     <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
     <aside id="cart-drawer" class="cart-drawer">
         <div class="cart-header">
-            <h3 style="font-family: var(--font-sans); font-weight: 800;">Your Loot 🛍️</h3>
+            <h3>YOUR LOOT <span class="sparkle">🛍️</span></h3>
             <button class="close-btn" onclick="toggleCart(false)">&times;</button>
         </div>
 
@@ -150,7 +197,9 @@
                 <span>Total</span>
                 <span id="total-val">$0.00</span>
             </div>
-            <button class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="openCheckout()">Secure the Bag 🔒</button>
+            <button class="btn btn-primary btn-block btn-glow" style="margin-top: 1.25rem;" onclick="openCheckout()">
+                <span>Secure the Bag 🔒</span>
+            </button>
         </div>
     </aside>
 
@@ -158,19 +207,19 @@
     <div id="checkout-modal" class="modal-overlay">
         <div class="checkout-card">
             <div class="checkout-header">
-                <h3 style="font-family: var(--font-sans); font-weight: 800; font-size: 1.2rem;">Checkout Phase 🔐</h3>
+                <h3>CHECKOUT PHASE <span class="sparkle">🔐</span></h3>
                 <button class="close-btn" onclick="closeCheckout()">&times;</button>
             </div>
             <div class="checkout-body">
                 <div class="checkout-tabs">
-                    <div id="tab-1" class="tab-step active">1. Drop Address</div>
-                    <div id="tab-2" class="tab-step">2. Pay Up</div>
+                    <div id="tab-1" class="tab-step active">1. DROP ADDRESS</div>
+                    <div id="tab-2" class="tab-step">2. PAY UP</div>
                 </div>
 
                 <div class="order-preview">
-                    <div style="font-size: 0.85rem; color: var(--muted-color); display: flex; justify-content: space-between;">
+                    <div class="order-preview-flex">
                         <span>Total Items: <strong id="modal-item-count">0</strong></span>
-                        <span>Amount: <strong id="modal-total-val" style="color: var(--accent-color); font-size: 1rem; font-weight: 800;">$0.00</strong></span>
+                        <span>Amount: <strong id="modal-total-val" class="highlight-total">$0.00</strong></span>
                     </div>
                 </div>
 
@@ -199,7 +248,9 @@
                                 <input type="text" class="form-control" required placeholder="90210">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="goToPayment()">Proceed to Payment ➔</button>
+                        <button type="button" class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="goToPayment()">
+                            <span>Proceed to Payment ➔</span>
+                        </button>
                     </div>
 
                     <!-- Step 2: Payment -->
@@ -223,9 +274,11 @@
                                 <input type="text" class="form-control" placeholder="123" maxlength="4">
                             </div>
                         </div>
-                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                            <button type="button" class="btn btn-outline" style="flex: 1;" onclick="backToShipping()">Back</button>
-                            <button type="submit" class="btn btn-primary" style="flex: 2;">Confirm & Pay ✨</button>
+                        <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+                            <button type="button" class="btn btn-glass" style="flex: 1;" onclick="backToShipping()">Back</button>
+                            <button type="submit" class="btn btn-primary" style="flex: 2;">
+                                <span>Confirm & Pay ✨</span>
+                            </button>
                         </div>
                     </div>
                 </form>
