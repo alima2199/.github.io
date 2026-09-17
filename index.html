@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CozyMarketz - Warmth & Comfort</title>
+    <title>CozyMarketz - Cozy Apparel & Loungewear</title>
     
-    <!-- ==========================================
-         ALL CSS STYLES INCLUDED BELOW
-         ========================================== -->
     <style>
-        /* 1. CSS Variables & Theme */
+        /* Theme & Variables */
         :root {
             --bg-color: #FAF6F0;
             --card-bg: #F4EBE1;
@@ -28,7 +25,7 @@
             --transition: all 0.2s ease-in-out;
         }
 
-        /* 2. Reset & Base Styles */
+        /* Base Reset */
         * {
             margin: 0;
             padding: 0;
@@ -58,7 +55,7 @@
             text-decoration: none;
         }
 
-        /* 3. Header & Navigation */
+        /* Navigation */
         .header {
             position: sticky;
             top: 0;
@@ -98,10 +95,9 @@
 
         .nav-links a:hover {
             color: var(--accent-color);
-            transition: var(--transition);
         }
 
-        /* 4. Buttons */
+        /* Buttons */
         .btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -122,22 +118,12 @@
             background-color: var(--accent-hover);
         }
 
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--card-bg);
-        }
-
         .btn-sm {
             padding: 0.5rem 1rem;
             font-size: 0.8rem;
         }
 
-        /* 5. Hero Section */
+        /* Hero Section */
         .hero {
             max-width: 1150px;
             margin: 0 auto;
@@ -184,15 +170,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
         .hero-image-wrapper {
             width: 100%;
-            height: 350px;
+            height: 400px;
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-md);
@@ -204,7 +184,7 @@
             object-fit: cover;
         }
 
-        /* 6. Featured Products Section */
+        /* Shop Grid */
         .featured-section {
             background-color: rgba(244, 235, 225, 0.4);
             padding: 5rem 1.5rem;
@@ -250,7 +230,7 @@
         }
 
         .product-img-container {
-            height: 240px;
+            height: 300px;
             border-radius: 0.75rem;
             overflow: hidden;
             margin-bottom: 1rem;
@@ -271,7 +251,29 @@
         .product-desc {
             color: var(--muted-color);
             font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .size-selector {
+            display: flex;
+            gap: 0.5rem;
             margin-bottom: 1rem;
+        }
+
+        .size-btn {
+            border: 1px solid var(--card-bg);
+            background: var(--bg-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .size-btn:hover {
+            border-color: var(--accent-color);
+            background-color: var(--white);
         }
 
         .product-footer {
@@ -284,7 +286,7 @@
             font-weight: bold;
         }
 
-        /* 7. About Section */
+        /* About Section */
         .about-section {
             max-width: 800px;
             margin: 0 auto;
@@ -298,81 +300,17 @@
             line-height: 1.8;
         }
 
-        /* 8. Newsletter Section */
-        .newsletter-section {
-            background-color: rgba(212, 163, 115, 0.1);
-            padding: 4rem 1.5rem;
-            border-top: 1px solid var(--card-bg);
-        }
-
-        .newsletter-container {
-            max-width: 550px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .newsletter-form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-
-        @media (min-width: 500px) {
-            .newsletter-form {
-                flex-direction: row;
-            }
-        }
-
-        .newsletter-input {
-            flex-grow: 1;
-            padding: 0.75rem 1.25rem;
-            border-radius: var(--radius-full);
-            border: 1px solid var(--card-bg);
-            outline: none;
-            font-size: 0.9rem;
-        }
-
-        .newsletter-input:focus {
-            border-color: var(--accent-color);
-        }
-
-        /* 9. Footer */
+        /* Footer */
         .footer {
             background-color: var(--bg-color);
             border-top: 1px solid var(--card-bg);
             padding: 2rem 1.5rem;
             font-size: 0.8rem;
             color: var(--muted-color);
+            text-align: center;
         }
 
-        .footer-container {
-            max-width: 1150px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-container {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* 10. Scroll Animation Styles */
+        /* Scroll Animation Rules */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -387,15 +325,15 @@
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Header -->
     <header class="header">
         <div class="nav-container">
             <a href="#" class="logo">CozyMarketz<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#featured">Shop</a></li>
-                <li><a href="#about">Our Story</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
-            <button class="btn btn-primary btn-sm">Cart (<span id="cart-count">0</span>)</button>
+            <button class="btn btn-primary btn-sm">Bag (<span id="cart-count">0</span>)</button>
         </div>
     </header>
 
@@ -403,62 +341,77 @@
         <!-- Hero Section -->
         <section class="hero">
             <div>
-                <span class="hero-subtitle">Curated Comforts</span>
-                <h1 class="hero-title">Bring warm, cozy vibes into your everyday life.</h1>
-                <p class="hero-text">Discover handcrafted candles, plush throws, and warm mugs.</p>
-                <div class="hero-actions">
-                    <a href="#featured" class="btn btn-primary">Explore Collection</a>
-                </div>
+                <span class="hero-subtitle">New Season Apparel</span>
+                <h1 class="hero-title">Wear warmth, feel effortless.</h1>
+                <p class="hero-text">Premium organic loungewear, oversized hoodies, and heavyweight knits designed for daily comfort.</p>
+                <a href="#collection" class="btn btn-primary">Shop Collection</a>
             </div>
             <div class="hero-image-wrapper animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cozy Home Decor">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Cozy Loungewear Model">
             </div>
         </section>
 
-        <!-- Featured Products Section -->
-        <section id="featured" class="featured-section animate-on-scroll">
+        <!-- Clothing Collection -->
+        <section id="collection" class="featured-section animate-on-scroll">
             <div class="section-header">
-                <h2 class="section-title">Featured Favorites</h2>
-                <p class="section-subtitle">Handpicked items to help you unwind.</p>
+                <h2 class="section-title">Cozy Essentials</h2>
+                <p class="section-subtitle">Handcrafted garments made for relaxing.</p>
             </div>
 
             <div class="product-grid">
-                <!-- Product 1 -->
+                <!-- Item 1 -->
                 <div class="product-card animate-on-scroll">
                     <div class="product-img-container">
-                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" alt="Scented Candle">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=500&q=80" alt="Oversized Fleece Hoodie">
                     </div>
-                    <h3 class="product-name">Scented Soy Candle</h3>
-                    <p class="product-desc">Vanilla & Amber</p>
+                    <h3 class="product-name">Cloud Fleece Hoodie</h3>
+                    <p class="product-desc">Oversized heavy-cotton blend in Oatmeal</p>
+                    <div class="size-selector">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
                     <div class="product-footer">
-                        <span class="product-price">$24.00</span>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Scented Soy Candle')">Add to Cart</button>
+                        <span class="product-price">$62.00</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Cloud Fleece Hoodie')">Add to Bag</button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
+                <!-- Item 2 -->
                 <div class="product-card animate-on-scroll">
                     <div class="product-img-container">
-                        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=500&q=80" alt="Chunky Blanket">
+                        <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=500&q=80" alt="Knit Sweater">
                     </div>
-                    <h3 class="product-name">Chunky Knit Blanket</h3>
-                    <p class="product-desc">Ultra-soft cotton</p>
+                    <h3 class="product-name">Ribbed Knit Sweater</h3>
+                    <p class="product-desc">100% merino wool knit in Cream</p>
+                    <div class="size-selector">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                    </div>
                     <div class="product-footer">
-                        <span class="product-price">$68.00</span>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Chunky Knit Blanket')">Add to Cart</button>
+                        <span class="product-price">$78.00</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Ribbed Knit Sweater')">Add to Bag</button>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
+                <!-- Item 3 -->
                 <div class="product-card animate-on-scroll">
                     <div class="product-img-container">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Ceramic Mug">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" alt="Lounge Pants">
                     </div>
-                    <h3 class="product-name">Artisan Ceramic Mug</h3>
-                    <p class="product-desc">Handmade pottery</p>
+                    <h3 class="product-name">Relaxed Lounge Pants</h3>
+                    <p class="product-desc">Soft fleece jogger trousers in Warm Taupe</p>
+                    <div class="size-selector">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
                     <div class="product-footer">
-                        <span class="product-price">$18.00</span>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Artisan Ceramic Mug')">Add to Cart</button>
+                        <span class="product-price">$48.00</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Relaxed Lounge Pants')">Add to Bag</button>
                     </div>
                 </div>
             </div>
@@ -466,39 +419,18 @@
 
         <!-- About Section -->
         <section id="about" class="about-section animate-on-scroll">
-            <h2 class="section-title">About CozyMarketz</h2>
-            <p>At CozyMarketz, we believe that home should be a sanctuary of peace, warmth, and comfort. We carefully curate sustainable, beautifully designed essentials that elevate your quiet everyday moments.</p>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter-section animate-on-scroll">
-            <div class="newsletter-container">
-                <h3 class="section-title">Join the Cozy Club</h3>
-                <p class="section-subtitle">Subscribe for updates and 10% off your first order.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
+            <h2 class="section-title">Designed For Living Softly</h2>
+            <p>At CozyMarketz, clothing isn't just about fashion—it's about how you feel. We design timeless, durable loungewear using ethically sourced fabrics that make every day feel like a slow morning.</p>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2026 CozyMarketz. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2026 CozyMarketz Clothing Co. All rights reserved.</p>
     </footer>
 
-    <!-- ==========================================
-         ALL JAVASCRIPT INCLUDED BELOW
-         ========================================== -->
+    <!-- JavaScript Code -->
     <script>
-        // 1. Shopping Cart Counter
+        // Bag Counter
         let count = 0;
 
         function addToCart(itemName) {
@@ -507,10 +439,10 @@
             if (cartCounter) {
                 cartCounter.innerText = count;
             }
-            alert(itemName + " added to your cart!");
+            alert(itemName + " added to your bag!");
         }
 
-        // 2. Scroll Animations Engine
+        // Scroll Animation
         document.addEventListener("DOMContentLoaded", function () {
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
@@ -521,7 +453,7 @@
                     }
                 });
             }, {
-                threshold: 0.15 // Triggers when 15% of the element is in view
+                threshold: 0.15
             });
 
             animatedElements.forEach(element => {
