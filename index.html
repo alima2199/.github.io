@@ -461,5 +461,42 @@
             });
         });
     </script>
+    <!-- Shopping Cart Drawer (Sliding Panel) -->
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button onclick="toggleCart()" class="close-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-body">
+        <p class="empty-msg">Your bag is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0.00</span>
+        </div>
+        <button onclick="openCheckout()" class="btn btn-primary btn-block">Proceed to Checkout</button>
+    </div>
+</div>
+
+<!-- Checkout Popup / Modal -->
+<div id="checkout-modal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeCheckout()" class="close-btn">&times;</span>
+        <h2>Checkout - CozyMarketz</h2>
+        <form onsubmit="handleCheckout(event)">
+            <label>Full Name</label>
+            <input type="text" required placeholder="Jane Doe" class="input-field">
+            
+            <label>Shipping Address</label>
+            <input type="text" required placeholder="123 Cozy Lane" class="input-field">
+            
+            <label>Card Details (Demo)</label>
+            <input type="text" required placeholder="4532 •••• •••• 8890" class="input-field">
+            
+            <button type="submit" class="btn btn-primary btn-block mt-4">Place Order</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
