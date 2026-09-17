@@ -164,3 +164,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animatedElements.forEach(el => observer.observe(el));
 });
+// Open Lightbox with Large Image and Caption
+function openLightbox(imgSrc, title) {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = imgSrc;
+        if (lightboxCaption) lightboxCaption.innerText = title || '';
+        lightbox.classList.add('open');
+    }
+}
+
+// Close Lightbox Modal
+function closeLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('open');
+    }
+}
