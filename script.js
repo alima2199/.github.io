@@ -1,3 +1,10 @@
+let cart = [];
+
+// Size Selector Handling
+function selectSize(btn) {
+    const siblings = btn.parentElement.querySelectorAll('.size-btn');
+    siblings.forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
 }
 
 // Drawer Visibility Toggle
@@ -39,7 +46,7 @@ function updateCart() {
     if (!itemsContainer) return;
 
     if (cart.length === 0) {
-        itemsContainer.innerHTML = `<p style="text-align: center; color: var(--muted-color); margin-top: 2rem;">Your bag is empty.</p>`;
+        itemsContainer.innerHTML = `<p style="text-align: center; color: var(--muted-color); margin-top: 3rem; font-weight: 700;">Your bag is empty. Go cop something 💀</p>`;
         if (subtotalVal) subtotalVal.innerText = "$0.00";
         if (shippingVal) shippingVal.innerText = "$0.00";
         if (totalVal) totalVal.innerText = "$0.00";
@@ -56,11 +63,11 @@ function updateCart() {
             <div class="cart-item">
                 <img src="${item.img}" class="cart-item-img" alt="${item.name}">
                 <div class="cart-item-details">
-                    <h4 style="font-size: 0.95rem;">${item.name}</h4>
-                    <span style="font-size: 0.75rem; color: var(--muted-color);">Size: ${item.size}</span>
-                    <div style="font-weight: bold; font-size: 0.85rem; margin-top: 0.2rem;">$${item.price.toFixed(2)}</div>
+                    <h4 style="font-size: 0.95rem; font-weight: 800;">${item.name}</h4>
+                    <span style="font-size: 0.75rem; color: var(--muted-color); font-weight: 700;">Size: ${item.size}</span>
+                    <div style="font-weight: 800; font-size: 0.9rem; margin-top: 0.2rem; color: var(--accent-color);">$${item.price.toFixed(2)}</div>
                 </div>
-                <button onclick="removeFromCart(${index})" style="background:none; border:none; color: #cc0000; cursor:pointer; font-size: 0.8rem;">Remove</button>
+                <button onclick="removeFromCart(${index})" style="background:none; border:none; color: #ff4757; cursor:pointer; font-size: 0.8rem; font-weight: 800;">Delete</button>
             </div>
         `;
     });
@@ -75,7 +82,7 @@ function updateCart() {
     updateShippingProgress(subtotal);
 }
 
-// Free Shipping Threshold Calculator
+// Free Shipping Tracker
 function updateShippingProgress(subtotal) {
     const goal = 100;
     const progress = Math.min((subtotal / goal) * 100, 100);
@@ -86,9 +93,9 @@ function updateShippingProgress(subtotal) {
     
     if (msg) {
         if (subtotal >= goal) {
-            msg.innerText = "🎉 You've unlocked FREE Express Shipping!";
+            msg.innerText = "🎉 FREE Shipping Unlocked! Big W.";
         } else {
-            msg.innerText = `Add $${(goal - subtotal).toFixed(2)} more for FREE Express Shipping`;
+            msg.innerText = `Add $${(goal - subtotal).toFixed(2)} more for FREE Express Shipping 🚀`;
         }
     }
 }
@@ -96,7 +103,7 @@ function updateShippingProgress(subtotal) {
 // Checkout Modal Navigation
 function openCheckout() {
     if (cart.length === 0) {
-        alert("Please add items to your bag first!");
+        alert("Your bag is empty! Go cop something first.");
         return;
     }
     toggleCart(false);
@@ -139,7 +146,7 @@ function setPayMethod(el) {
 
 function processOrder(e) {
     e.preventDefault();
-    alert("✨ Order placed successfully! Thank you for shopping with CozyMarketz.");
+    alert("🔥 Order Securing Complete! Fits arriving soon.");
     cart = [];
     updateCart();
     closeCheckout();
