@@ -461,6 +461,12 @@
 
             animatedElements.forEach(el => observer.observe(el));
         });
+        <!-- Image Lightbox Modal -->
+<div id="image-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="Product Preview">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+</div>
     </script>
 </body>
 </html>
