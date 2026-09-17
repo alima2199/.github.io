@@ -364,3 +364,19 @@ a {
 .footer-links a:hover {
   text-decoration: underline;
 }
+/* ==========================================================================
+   Scroll Animations
+   ========================================================================== */
+
+/* Start position before scrolling (hidden & pushed down slightly) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* End position when scrolled into view (visible & back in place) */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
