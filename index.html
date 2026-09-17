@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CozyMarketz — Modern E-Commerce</title>
-    <!-- Relative stylesheet path: works seamlessly on GitHub Pages and local server -->
+    <title>COZY CLOUT — Main Character Energy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Marquee Banner -->
+    <div class="marquee-banner">
+        <span>⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡ FREE SHIPPING OVER $100 ⚡ MAIN CHARACTER VIBES ONLY ⚡</span>
+    </div>
+
     <!-- Header & Navigation -->
     <header class="header">
         <div class="nav-container">
-            <a href="#" class="logo">Cozy<span>Marketz</span></a>
+            <a href="#" class="logo">COZY<span>CLOUT</span> ✦</a>
             <ul class="nav-links">
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#shop">The Drops</a></li>
+                <li><a href="#vibe">Vibe Check</a></li>
                 <li>
                     <button class="btn btn-outline btn-sm" onclick="toggleCart(true)">
-                        Bag (<span id="cart-count">0</span>)
+                        Bag 🛒 (<span id="cart-count">0</span>)
                     </button>
                 </li>
             </ul>
@@ -28,30 +32,35 @@
     <!-- Hero Section -->
     <section class="hero animate-on-scroll">
         <div>
-            <h1 class="hero-title">Elevate Your Everyday Comfort</h1>
-            <p class="hero-text">Discover curated essentials designed for timeless style, premium warmth, and absolute relaxation.</p>
-            <a href="#shop" class="btn btn-primary">Explore Collection</a>
+            <div class="pill-tag">✨ Vibe Level: Unmatched</div>
+            <h1 class="hero-title">Fits That Hit Different. Period.</h1>
+            <p class="hero-text">Zero skip, maximum clout. Upgrade your daily rotation with cozy essentials built for the main character.</p>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="#shop" class="btn btn-primary">Secure the Drip ➔</a>
+                <span style="font-size: 0.85rem; color: var(--muted-color); font-weight: bold;">🔥 1.4k copped today</span>
+            </div>
         </div>
         <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=80" alt="Hero Collection">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Hero Fit">
         </div>
     </section>
 
     <!-- Products Grid Section -->
     <section id="shop" class="featured-section">
         <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Featured Essentials</h2>
-            <p style="color: var(--muted-color); font-size: 0.95rem;">Handpicked favorites crafted from sustainable, high-grade fabrics.</p>
+            <h2 class="section-title">The Latest Drop 💀🔥</h2>
+            <p style="color: var(--muted-color); font-size: 0.95rem;">High key essential. Low key timeless.</p>
         </div>
 
         <div class="product-grid">
             <!-- Product Card 1 -->
             <div class="product-card animate-on-scroll">
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit Sweater')">
-                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Oversized Cable Knit Sweater">
+                <span class="badge">TRENDING ⚡</span>
+                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit — Essential Heavy Knit')">
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Oversized Cable Knit">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit Sweater')">Oversized Cable Knit</h3>
-                <p class="product-desc">Ultra-soft wool blend with heavy textured weave.</p>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit — Essential Heavy Knit')">Oversized Knit Sweater</h3>
+                <p class="product-desc">Heavyweight textured knit. Ultimate comfort energy.</p>
                 
                 <div class="size-selector">
                     <button class="size-btn active" onclick="selectSize(this)">S</button>
@@ -60,18 +69,19 @@
                 </div>
 
                 <div class="product-footer">
-                    <span style="font-weight: bold; font-size: 1.1rem;">$85.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Oversized Cable Knit', 85.00, 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', this)">Add to Bag</button>
+                    <span style="font-weight: 800; font-size: 1.2rem;">$85.00</span>
+                    <button class="btn btn-primary btn-sm" onclick="addToCart('Oversized Knit Sweater', 85.00, 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
                 </div>
             </div>
 
             <!-- Product Card 2 -->
             <div class="product-card animate-on-scroll">
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Minimalist Fleece Hoodie')">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Minimalist Fleece Hoodie">
+                <span class="badge" style="background: var(--text-color); color: var(--bg-color);">BESTSELLER 👑</span>
+                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Boxy Heavyweight Hoodie — Organic Fleece')">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Boxy Heavyweight Hoodie">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Minimalist Fleece Hoodie')">Minimalist Fleece Hoodie</h3>
-                <p class="product-desc">Heavyweight organic cotton fleece tailored fit.</p>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Boxy Heavyweight Hoodie — Organic Fleece')">Boxy Fleece Hoodie</h3>
+                <p class="product-desc">450GSM organic fleece. No hood string, pure minimal aesthetic.</p>
                 
                 <div class="size-selector">
                     <button class="size-btn active" onclick="selectSize(this)">S</button>
@@ -80,18 +90,19 @@
                 </div>
 
                 <div class="product-footer">
-                    <span style="font-weight: bold; font-size: 1.1rem;">$62.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Minimalist Fleece Hoodie', 62.00, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', this)">Add to Bag</button>
+                    <span style="font-weight: 800; font-size: 1.2rem;">$62.00</span>
+                    <button class="btn btn-primary btn-sm" onclick="addToCart('Boxy Fleece Hoodie', 62.00, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
                 </div>
             </div>
 
             <!-- Product Card 3 -->
             <div class="product-card animate-on-scroll">
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Heavyweight Essential Tee')">
-                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Heavyweight Essential Tee">
+                <span class="badge" style="background: #e74c3c; color: white;">SELLING FAST ⏳</span>
+                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee — Vintage Wash')">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Drop-Shoulder Heavy Tee">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Heavyweight Essential Tee')">Essential Heavyweight Tee</h3>
-                <p class="product-desc">Relaxed drop-shoulder silhouette in earthy neutral tone.</p>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee — Vintage Wash')">Drop-Shoulder Tee</h3>
+                <p class="product-desc">Vintage wash oversized tee. Laid back vibes only.</p>
                 
                 <div class="size-selector">
                     <button class="size-btn active" onclick="selectSize(this)">S</button>
@@ -100,8 +111,8 @@
                 </div>
 
                 <div class="product-footer">
-                    <span style="font-weight: bold; font-size: 1.1rem;">$38.00</span>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Essential Heavyweight Tee', 38.00, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', this)">Add to Bag</button>
+                    <span style="font-weight: 800; font-size: 1.2rem;">$38.00</span>
+                    <button class="btn btn-primary btn-sm" onclick="addToCart('Drop-Shoulder Tee', 38.00, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', this)">Cop Now 🛒</button>
                 </div>
             </div>
         </div>
@@ -111,12 +122,12 @@
     <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
     <aside id="cart-drawer" class="cart-drawer">
         <div class="cart-header">
-            <h3 style="font-family: var(--font-serif);">Your Shopping Bag</h3>
+            <h3 style="font-family: var(--font-sans); font-weight: 800;">Your Loot 🛍️</h3>
             <button class="close-btn" onclick="toggleCart(false)">&times;</button>
         </div>
 
         <div class="free-shipping-bar">
-            <div id="shipping-msg">Add $100.00 more for FREE Express Shipping</div>
+            <div id="shipping-msg">Add $100.00 more for FREE Express Shipping 🚀</div>
             <div class="progress-line">
                 <div id="shipping-progress" class="progress-fill"></div>
             </div>
@@ -139,7 +150,7 @@
                 <span>Total</span>
                 <span id="total-val">$0.00</span>
             </div>
-            <button class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="openCheckout()">Checkout Now</button>
+            <button class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="openCheckout()">Secure the Bag 🔒</button>
         </div>
     </aside>
 
@@ -147,19 +158,19 @@
     <div id="checkout-modal" class="modal-overlay">
         <div class="checkout-card">
             <div class="checkout-header">
-                <h3 style="font-family: var(--font-serif); font-size: 1.2rem;">Secure Checkout</h3>
+                <h3 style="font-family: var(--font-sans); font-weight: 800; font-size: 1.2rem;">Checkout Phase 🔐</h3>
                 <button class="close-btn" onclick="closeCheckout()">&times;</button>
             </div>
             <div class="checkout-body">
                 <div class="checkout-tabs">
-                    <div id="tab-1" class="tab-step active">1. Shipping Details</div>
-                    <div id="tab-2" class="tab-step">2. Payment Method</div>
+                    <div id="tab-1" class="tab-step active">1. Drop Address</div>
+                    <div id="tab-2" class="tab-step">2. Pay Up</div>
                 </div>
 
                 <div class="order-preview">
                     <div style="font-size: 0.85rem; color: var(--muted-color); display: flex; justify-content: space-between;">
-                        <span>Order Items: <strong id="modal-item-count">0</strong></span>
-                        <span>Total Due: <strong id="modal-total-val" style="color: var(--text-color); font-size: 0.95rem;">$0.00</strong></span>
+                        <span>Total Items: <strong id="modal-item-count">0</strong></span>
+                        <span>Amount: <strong id="modal-total-val" style="color: var(--accent-color); font-size: 1rem; font-weight: 800;">$0.00</strong></span>
                     </div>
                 </div>
 
@@ -169,33 +180,34 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" required placeholder="Jane">
+                                <input type="text" class="form-control" required placeholder="Kai">
                             </div>
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" required placeholder="Doe">
+                                <input type="text" class="form-control" required placeholder="Cenat">
                             </div>
                             <div class="form-group form-full">
-                                <label>Street Address</label>
-                                <input type="text" class="form-control" required placeholder="123 Cozy St">
+                                <label>Delivery Spot</label>
+                                <input type="text" class="form-control" required placeholder="777 Clout Ave, Apt 4B">
                             </div>
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-control" required placeholder="Seattle">
+                                <input type="text" class="form-control" required placeholder="Los Angeles">
                             </div>
                             <div class="form-group">
-                                <label>Postal Code</label>
-                                <input type="text" class="form-control" required placeholder="98101">
+                                <label>Zip Code</label>
+                                <input type="text" class="form-control" required placeholder="90210">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="goToPayment()">Continue to Payment</button>
+                        <button type="button" class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="goToPayment()">Proceed to Payment ➔</button>
                     </div>
 
                     <!-- Step 2: Payment -->
                     <div id="step-payment" style="display: none;">
                         <div class="pay-options">
-                            <div class="pay-option selected" onclick="setPayMethod(this)">💳 Credit Card</div>
+                            <div class="pay-option selected" onclick="setPayMethod(this)">💳 Card</div>
                             <div class="pay-option" onclick="setPayMethod(this)">🅿️ PayPal</div>
+                            <div class="pay-option" onclick="setPayMethod(this)">🍎 Apple Pay</div>
                         </div>
                         <div class="form-group">
                             <label>Card Number</label>
@@ -213,7 +225,7 @@
                         </div>
                         <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
                             <button type="button" class="btn btn-outline" style="flex: 1;" onclick="backToShipping()">Back</button>
-                            <button type="submit" class="btn btn-primary" style="flex: 2;">Place Order</button>
+                            <button type="submit" class="btn btn-primary" style="flex: 2;">Confirm & Pay ✨</button>
                         </div>
                     </div>
                 </form>
@@ -228,7 +240,6 @@
         <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
-    <!-- Relative script path -->
     <script src="script.js"></script>
 </body>
 </html>
