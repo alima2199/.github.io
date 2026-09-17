@@ -1,11 +1,166 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Hello!</h1>
-    <p>Welcome to my website</p>
-    <button>click me</button>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyMarketz - Warmth & Comfort for Your Space</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cozyBg: '#FAF6F0',
+                        cozyCard: '#F4EBE1',
+                        cozyAccent: '#D4A373',
+                        cozyHover: '#BC8A5F',
+                        cozyText: '#4A3E3D',
+                        cozyMuted: '#8C7A6B'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cozyBg text-cozyText font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navigation -->
+    <header class="bg-cozyBg/80 backdrop-blur-md sticky top-0 z-50 border-b border-cozyCard">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-cozyAccent tracking-wide">CozyMarketz<span class="text-cozyText">.</span></a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium text-sm">
+                <a href="#featured" class="hover:text-cozyAccent transition-colors">Shop</a>
+                <a href="#about" class="hover:text-cozyAccent transition-colors">Our Story</a>
+                <a href="#newsletter" class="hover:text-cozyAccent transition-colors">Community</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-cozyAccent text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cozyHover transition-all shadow-sm">
+                    Cart (0)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-widest text-cozyMuted font-bold">Curated Comforts</span>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-cozyText leading-tight">
+                    Bring warm, cozy vibes into your everyday life.
+                </h1>
+                <p class="text-cozyMuted text-lg">
+                    Discover handcrafted candles, plush throws, warm mugs, and artisanal decor designed to turn any space into your sanctuary.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-4">
+                    <a href="#featured" class="bg-cozyAccent text-white px-6 py-3 rounded-full font-medium hover:bg-cozyHover transition-all shadow-md">
+                        Explore Collection
+                    </a>
+                    <a href="#about" class="border border-cozyAccent text-cozyAccent px-6 py-3 rounded-full font-medium hover:bg-cozyCard transition-all">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-full h-80 md:h-[400px] bg-cozyCard rounded-3xl overflow-hidden shadow-xl flex items-center justify-center text-cozyMuted font-serif italic text-lg border border-white/50">
+                    <!-- Placeholder image URL using Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cozy Home Decor" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="featured" class="bg-cozyCard/50 py-16 border-y border-cozyCard">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-cozyText mb-3">Featured Favorites</h2>
+                    <p class="text-cozyMuted">Handpicked items to help you unwind and create the perfect atmosphere.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-64 bg-cozyBg rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=80" alt="Scented Candle" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-lg mb-1">Warm Vanilla & Amber Candle</h3>
+                        <p class="text-cozyMuted text-sm mb-3">100% Hand-poured soy wax</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-cozyText">$24.00</span>
+                            <button class="text-xs bg-cozyBg hover:bg-cozyAccent hover:text-white text-cozyText px-3 py-2 rounded-lg font-semibold transition-colors">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-64 bg-cozyBg rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=500&q=80" alt="Knit Throw Blanket" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-lg mb-1">Chunky Knit Blanket</h3>
+                        <p class="text-cozyMuted text-sm mb-3">Ultra-soft organic cotton blend</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-cozyText">$68.00</span>
+                            <button class="text-xs bg-cozyBg hover:bg-cozyAccent hover:text-white text-cozyText px-3 py-2 rounded-lg font-semibold transition-colors">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-64 bg-cozyBg rounded-xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Ceramic Mug" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-lg mb-1">Artisan Ceramic Coffee Mug</h3>
+                        <p class="text-cozyMuted text-sm mb-3">Handmade wheel-thrown pottery</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-cozyText">$18.00</span>
+                            <button class="text-xs bg-cozyBg hover:bg-cozyAccent hover:text-white text-cozyText px-3 py-2 rounded-lg font-semibold transition-colors">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-6">About CozyMarketz</h2>
+            <p class="text-cozyMuted leading-relaxed text-lg mb-6">
+                At CozyMarketz, we believe that home should be a sanctuary of peace, warmth, and comfort. We carefully curate and partner with independent artisans to bring you sustainable, beautifully designed essentials that elevate your quiet moments.
+            </p>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="bg-cozyAccent/10 py-16 border-t border-cozyCard">
+            <div class="max-w-xl mx-auto px-6 text-center">
+                <h3 class="text-2xl font-serif font-bold mb-2">Join the Cozy Club</h3>
+                <p class="text-cozyMuted text-sm mb-6">Subscribe to receive seasonal updates, cozy decor tips, and 10% off your first order.</p>
+                <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" placeholder="Enter your email address" required class="flex-grow px-4 py-3 rounded-full text-sm border border-cozyCard focus:outline-none focus:ring-2 focus:ring-cozyAccent bg-white">
+                    <button type="submit" class="bg-cozyAccent text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-cozyHover transition-all shadow-sm">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-cozyBg border-t border-cozyCard py-8 text-center text-xs text-cozyMuted">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 CozyMarketz. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
