@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CozyMarketz — Modern E-Commerce</title>
+    <!-- Relative stylesheet path: works seamlessly on GitHub Pages and local server -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -49,7 +50,7 @@
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit Sweater')">
                     <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Oversized Cable Knit Sweater">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit Sweater')" style="cursor:pointer;">Oversized Cable Knit</h3>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit Sweater')">Oversized Cable Knit</h3>
                 <p class="product-desc">Ultra-soft wool blend with heavy textured weave.</p>
                 
                 <div class="size-selector">
@@ -69,7 +70,7 @@
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Minimalist Fleece Hoodie')">
                     <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Minimalist Fleece Hoodie">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Minimalist Fleece Hoodie')" style="cursor:pointer;">Minimalist Fleece Hoodie</h3>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Minimalist Fleece Hoodie')">Minimalist Fleece Hoodie</h3>
                 <p class="product-desc">Heavyweight organic cotton fleece tailored fit.</p>
                 
                 <div class="size-selector">
@@ -89,7 +90,7 @@
                 <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Heavyweight Essential Tee')">
                     <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Heavyweight Essential Tee">
                 </div>
-                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Heavyweight Essential Tee')" style="cursor:pointer;">Essential Heavyweight Tee</h3>
+                <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80', 'Heavyweight Essential Tee')">Essential Heavyweight Tee</h3>
                 <p class="product-desc">Relaxed drop-shoulder silhouette in earthy neutral tone.</p>
                 
                 <div class="size-selector">
@@ -122,7 +123,7 @@
         </div>
 
         <div id="cart-items" class="cart-body">
-            <!-- Dynamic Cart Items Injected Here via script.js -->
+            <!-- Dynamic Cart Items Injected Here -->
         </div>
 
         <div class="cart-footer">
@@ -227,6 +228,7 @@
         <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
+    <!-- Relative script path -->
     <script src="script.js"></script>
 </body>
 </html>
