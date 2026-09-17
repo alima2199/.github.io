@@ -46,7 +46,7 @@ function updateCart() {
     if (!itemsContainer) return;
 
     if (cart.length === 0) {
-        itemsContainer.innerHTML = `<p style="text-align: center; color: var(--muted-color); margin-top: 3rem; font-weight: 700;">Your bag is empty. Go cop something 💀</p>`;
+        itemsContainer.innerHTML = `<p style="text-align: center; color: var(--muted-color); margin-top: 4rem; font-weight: 700; font-family: var(--font-head);">YOUR BAG IS EMPTY.<br>GO COP SOMETHING 💀</p>`;
         if (subtotalVal) subtotalVal.innerText = "$0.00";
         if (shippingVal) shippingVal.innerText = "$0.00";
         if (totalVal) totalVal.innerText = "$0.00";
@@ -63,11 +63,11 @@ function updateCart() {
             <div class="cart-item">
                 <img src="${item.img}" class="cart-item-img" alt="${item.name}">
                 <div class="cart-item-details">
-                    <h4 style="font-size: 0.95rem; font-weight: 800;">${item.name}</h4>
-                    <span style="font-size: 0.75rem; color: var(--muted-color); font-weight: 700;">Size: ${item.size}</span>
-                    <div style="font-weight: 800; font-size: 0.9rem; margin-top: 0.2rem; color: var(--accent-color);">$${item.price.toFixed(2)}</div>
+                    <h4 style="font-size: 0.95rem; font-weight: 800; font-family: var(--font-head);">${item.name}</h4>
+                    <span style="font-size: 0.75rem; color: var(--muted-color); font-weight: 700;">SIZE: ${item.size}</span>
+                    <div style="font-weight: 800; font-size: 0.95rem; margin-top: 0.2rem; color: var(--accent-color); font-family: var(--font-head);">$${item.price.toFixed(2)}</div>
                 </div>
-                <button onclick="removeFromCart(${index})" style="background:none; border:none; color: #ff4757; cursor:pointer; font-size: 0.8rem; font-weight: 800;">Delete</button>
+                <button onclick="removeFromCart(${index})" style="background:none; border:none; color: #FF3366; cursor:pointer; font-size: 0.75rem; font-weight: 800; font-family: var(--font-head);">REMOVE</button>
             </div>
         `;
     });
@@ -136,6 +136,7 @@ function backToShipping() {
     document.getElementById('step-payment').style.display = 'none';
     document.getElementById('step-shipping').style.display = 'block';
     document.getElementById('tab-2').classList.remove('active');
+    document.getElementById('tab-1').classList.active = false;
     document.getElementById('tab-1').classList.add('active');
 }
 
