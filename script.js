@@ -1,4 +1,7 @@
-// Simple pop-up message when the button is clicked
-function addToCart() {
-  alert("Item added to your CozyMarketz cart!");
+let count = 0;
+
+function addToCart(itemName) {
+    count = count + 1;
+    document.getElementById('cart-count').innerText = count;
+    alert(itemName + " added to your cart!");
 }
