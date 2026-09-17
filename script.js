@@ -1,13 +1,6 @@
-let cart = [];
-
-// Size Button Selection Handling
-function selectSize(btn) {
-    const siblings = btn.parentElement.querySelectorAll('.size-btn');
-    siblings.forEach(s => s.classList.remove('active'));
-    btn.classList.add('active');
 }
 
-// Open/Close Side Drawer
+// Drawer Visibility Toggle
 function toggleCart(open) {
     const drawer = document.getElementById('cart-drawer');
     const overlay = document.getElementById('cart-overlay');
@@ -17,23 +10,23 @@ function toggleCart(open) {
     }
 }
 
-// Add Item to Cart with Selected Size & Image
+// Add Item to Cart
 function addToCart(name, price, img, btn) {
     const card = btn.closest('.product-card');
     const selectedSize = card ? card.querySelector('.size-btn.active')?.innerText || 'S' : 'S';
 
     cart.push({ name, price, img, size: selectedSize });
     updateCart();
-    toggleCart(true); // Automatically open drawer upon adding
+    toggleCart(true);
 }
 
-// Remove Item by Index
+// Remove Item
 function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
 }
 
-// Dynamic Cart & Shipping Progress Calculator
+// Cart Calculator & UI Render
 function updateCart() {
     const itemsContainer = document.getElementById('cart-items');
     const cartCount = document.getElementById('cart-count');
@@ -82,7 +75,7 @@ function updateCart() {
     updateShippingProgress(subtotal);
 }
 
-// Free Shipping Threshold Tracker
+// Free Shipping Threshold Calculator
 function updateShippingProgress(subtotal) {
     const goal = 100;
     const progress = Math.min((subtotal / goal) * 100, 100);
@@ -100,7 +93,7 @@ function updateShippingProgress(subtotal) {
     }
 }
 
-// Checkout Modal Step Navigation
+// Checkout Modal Navigation
 function openCheckout() {
     if (cart.length === 0) {
         alert("Please add items to your bag first!");
@@ -146,7 +139,7 @@ function setPayMethod(el) {
 
 function processOrder(e) {
     e.preventDefault();
-    alert("✨ Order placed successfully! Thank you for shopping.");
+    alert("✨ Order placed successfully! Thank you for shopping with CozyMarketz.");
     cart = [];
     updateCart();
     closeCheckout();
@@ -173,7 +166,7 @@ function closeLightbox() {
     }
 }
 
-// Intersection Observer for Scroll Animations
+// Scroll Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     const observer = new IntersectionObserver((entries) => {
