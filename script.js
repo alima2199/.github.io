@@ -136,7 +136,6 @@ function backToShipping() {
     document.getElementById('step-payment').style.display = 'none';
     document.getElementById('step-shipping').style.display = 'block';
     document.getElementById('tab-2').classList.remove('active');
-    document.getElementById('tab-1').classList.active = false;
     document.getElementById('tab-1').classList.add('active');
 }
 
