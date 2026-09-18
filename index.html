@@ -3,126 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COZY CLOUT ✦ MAIN CHARACTER ARCHIVE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <title>Streetwear Apparel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Ambient Mesh Background Glows -->
-    <div class="glow-sphere sphere-1"></div>
-    <div class="glow-sphere sphere-2"></div>
-
-    <!-- Marquee Banner -->
-    <div class="marquee-banner">
-        <div class="marquee-track">
-            <span>⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡ FREE SHIPPING OVER $100 ⚡ MAIN CHARACTER VIBES ONLY ⚡ USE CODE 'NOCAP' FOR 15% OFF ⚡ NO SKIP FITS ⚡ SLAY ALL DAY ⚡</span>
-        </div>
-    </div>
-
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="#" class="logo">COZY<span>CLOUT</span> <span class="sparkle">✦</span></a>
-            <ul class="nav-links">
-                <li><a href="#shop" class="nav-item">The Drops</a></li>
-                <li><a href="#vibe" class="nav-item">Vibe Check</a></li>
-                <li>
-                    <button class="btn btn-glass btn-sm cart-btn" onclick="toggleCart(true)">
-                        <span>BAG 🛒</span>
-                        <span id="cart-count" class="cart-badge">0</span>
-                    </button>
-                </li>
-            </ul>
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="logo">CYBERSTREET</div>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero animate-on-scroll">
-        <div class="hero-content">
-            <div class="pill-tag">
-                <span class="pulse-dot"></span>
-                <span>Vibe Level: Unmatched</span>
+    <main class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container animate-on-scroll">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-input" 
+                    placeholder="Search hoodies, cargos, tees..." 
+                    oninput="filterProducts()"
+                >
+                <button id="clear-search" class="clear-search-btn" onclick="clearSearch()" style="display: none;">&times;</button>
             </div>
-            <h1 class="hero-title">FITS THAT HIT DIFFERENT.<br><span class="text-gradient">PERIOD.</span></h1>
-            <p class="hero-text">Zero skip, maximum clout. Upgrade your daily rotation with hyper-curated cozy essentials built strictly for the main character energy.</p>
-            <div class="hero-actions">
-                <a href="#shop" class="btn btn-primary btn-glow">
-                    <span>Secure the Drip</span>
-                    <span class="arrow">➔</span>
-                </a>
-                <div class="clout-proof">
-                    <div class="avatar-stack">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="user">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="user">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="user">
-                    </div>
-                    <span>🔥 <strong>1.4k</strong> copped today</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-image-wrapper">
-            <div class="hero-card-glow"></div>
-            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80" alt="Hero Fit" class="hero-img">
-            <div class="floating-tag">
-                <span>NEW ARCHIVE DROP</span>
-                <strong>FW/26 BATCH 01</strong>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Grid Section -->
-    <section id="shop" class="featured-section">
-        <div class="section-header animate-on-scroll">
-            <div class="pill-tag small">LIMITED QUANTITIES</div>
-            <h2 class="section-title">THE ARCHIVE CATALOG <span class="emoji-glow">💀🔥</span></h2>
-            <p class="section-subtitle">10 Core Essentials. Unlimited Drip.</p>
         </div>
 
+        <!-- Product Grid -->
         <div class="product-grid">
 
-            <!-- Item 1: Pitch Black Boxy Hoodie -->
+            <!-- Item 1: Y2K Cyber Sigil Hoodie -->
             <div class="product-card animate-on-scroll">
-                <span class="badge badge-neon">BESTSELLER 👑</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Pitch Black Boxy Hoodie')">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Pitch Black Hoodie">
+                <span class="badge badge-purple">NEW DROP 🔥</span>
+                <div class="product-img-container" onclick="openLightbox('https://i.etsystatic.com/55890051/r/il/cfff33/6672349071/il_570xN.6672349071_f81s.jpg', 'Y2K Cyber Sigil Hoodie')">
+                    <img src="https://i.etsystatic.com/55890051/r/il/cfff33/6672349071/il_570xN.6672349071_f81s.jpg" alt="Y2K Cyber Sigil Hoodie">
                     <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', 'Pitch Black Boxy Hoodie')">Pitch Black Boxy Hoodie</h3>
-                    <p class="product-desc">500GSM double-layer fleece. Zero hood strings, maximum structure.</p>
+                    <h3 class="product-name" onclick="openLightbox('https://i.etsystatic.com/55890051/r/il/cfff33/6672349071/il_570xN.6672349071_f81s.jpg', 'Y2K Cyber Sigil Hoodie')">Y2K Cyber Sigil Hoodie</h3>
+                    <p class="product-desc">Heavyweight 450GSM cotton fleece with cyber sigilism sleeve prints.</p>
                     <div class="size-selector">
                         <button class="size-btn active" onclick="selectSize(this)">S</button>
                         <button class="size-btn" onclick="selectSize(this)">M</button>
                         <button class="size-btn" onclick="selectSize(this)">L</button>
+                        <button class="size-btn" onclick="selectSize(this)">XL</button>
                     </div>
                     <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>78.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Pitch Black Boxy Hoodie', 78.00, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
+                        <div class="price-tag"><span class="currency">$</span>95.00</div>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Y2K Cyber Sigil Hoodie', 95.00, 'https://i.etsystatic.com/55890051/r/il/cfff33/6672349071/il_570xN.6672349071_f81s.jpg', this)">COP NOW 🛒</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 2: Void Heavyweight Zip-Up -->
+            <!-- Item 2: Tactical Cargo Pants -->
             <div class="product-card animate-on-scroll">
-                <span class="badge badge-dark">NEW DROP ⚡</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80', 'Void Heavyweight Zip-Up')">
-                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80" alt="Void Black Zip-Up">
+                <div class="product-img-container" onclick="openLightbox('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRvdGt_Jrp6N41_aOvEZDdm75OgcU1BCGV4fMZa_JhDDoPmITy-jIyjlmG1Yy7ka1J-ZdeA5SLWxlW-zIQ', 'Tactical Multi-Pocket Cargos')">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRvdGt_Jrp6N41_aOvEZDdm75OgcU1BCGV4fMZa_JhDDoPmITy-jIyjlmG1Yy7ka1J-ZdeA5SLWxlW-zIQ" alt="Tactical Cargo Pants">
                     <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80', 'Void Heavyweight Zip-Up')">Void Heavyweight Zip-Up</h3>
-                    <p class="product-desc">Washed jet black finish, custom matte hardware, relaxed crop.</p>
+                    <h3 class="product-name" onclick="openLightbox('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRvdGt_Jrp6N41_aOvEZDdm75OgcU1BCGV4fMZa_JhDDoPmITy-jIyjlmG1Yy7ka1J-ZdeA5SLWxlW-zIQ', 'Tactical Multi-Pocket Cargos')">Tactical Multi-Pocket Cargos</h3>
+                    <p class="product-desc">Water-resistant ripstop canvas with adjustable ankle cuffs and 8 pockets.</p>
                     <div class="size-selector">
                         <button class="size-btn active" onclick="selectSize(this)">S</button>
                         <button class="size-btn" onclick="selectSize(this)">M</button>
                         <button class="size-btn" onclick="selectSize(this)">L</button>
                     </div>
                     <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>82.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Void Heavyweight Zip-Up', 82.00, 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
+                        <div class="price-tag"><span class="currency">$</span>110.00</div>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Tactical Multi-Pocket Cargos', 110.00, 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRvdGt_Jrp6N41_aOvEZDdm75OgcU1BCGV4fMZa_JhDDoPmITy-jIyjlmG1Yy7ka1J-ZdeA5SLWxlW-zIQ', this)">COP NOW 🛒</button>
                     </div>
                 </div>
             </div>
@@ -130,12 +82,12 @@
             <!-- Item 3: Acid Wash Cyber Hoodie -->
             <div class="product-card animate-on-scroll">
                 <span class="badge badge-red">SELLING FAST ⏳</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80', 'Acid Wash Cyber Hoodie')">
-                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" alt="Acid Wash Hoodie">
+                <div class="product-img-container" onclick="openLightbox('https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', 'Acid Wash Cyber Hoodie')">
+                    <img src="https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg" alt="Acid Wash Hoodie">
                     <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80', 'Acid Wash Cyber Hoodie')">Acid Wash Cyber Hoodie</h3>
+                    <h3 class="product-name" onclick="openLightbox('https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', 'Acid Wash Cyber Hoodie')">Acid Wash Cyber Hoodie</h3>
                     <p class="product-desc">Vintage washed charcoal black with drop shoulders and thumbhole cuffs.</p>
                     <div class="size-selector">
                         <button class="size-btn active" onclick="selectSize(this)">S</button>
@@ -144,43 +96,42 @@
                     </div>
                     <div class="product-footer">
                         <div class="price-tag"><span class="currency">$</span>85.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Acid Wash Cyber Hoodie', 85.00, 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Acid Wash Cyber Hoodie', 85.00, 'https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', this)">COP NOW 🛒</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 4: Wide-Leg Heavy Sweats -->
+            <!-- Item 4: Essential Boxy Oversized Tee -->
             <div class="product-card animate-on-scroll">
-                <span class="badge badge-neon">ESSENTIAL 💫</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80', 'Wide-Leg Heavy Sweatpants')">
-                    <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80" alt="Black Wide Leg Sweatpants">
+                <div class="product-img-container" onclick="openLightbox('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSpTnZKspfCmeeKb4Ts38cu3BflaarQ5WSDrnVQBCMKEW2WX3fz9kNJOHJe7w2v-TPjm_ZR06_9zwaE1Gc', 'Essential Boxy Oversized Tee')">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSpTnZKspfCmeeKb4Ts38cu3BflaarQ5WSDrnVQBCMKEW2WX3fz9kNJOHJe7w2v-TPjm_ZR06_9zwaE1Gc" alt="Oversized Boxy Tee">
                     <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80', 'Wide-Leg Heavy Sweatpants')">Wide-Leg Heavy Sweats</h3>
-                    <p class="product-desc">Deep black open-hem sweatpants. Extreme stack profile over sneakers.</p>
+                    <h3 class="product-name" onclick="openLightbox('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSpTnZKspfCmeeKb4Ts38cu3BflaarQ5WSDrnVQBCMKEW2WX3fz9kNJOHJe7w2v-TPjm_ZR06_9zwaE1Gc', 'Essential Boxy Oversized Tee')">Essential Boxy Oversized Tee</h3>
+                    <p class="product-desc">280GSM heavy cotton jersey cut with wide sleeves and a relaxed streetwear drape.</p>
                     <div class="size-selector">
                         <button class="size-btn active" onclick="selectSize(this)">S</button>
                         <button class="size-btn" onclick="selectSize(this)">M</button>
                         <button class="size-btn" onclick="selectSize(this)">L</button>
+                        <button class="size-btn" onclick="selectSize(this)">XL</button>
                     </div>
                     <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>68.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Wide-Leg Heavy Sweats', 68.00, 'https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
+                        <div class="price-tag"><span class="currency">$</span>48.00</div>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Essential Boxy Oversized Tee', 48.00, 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSpTnZKspfCmeeKb4Ts38cu3BflaarQ5WSDrnVQBCMKEW2WX3fz9kNJOHJe7w2v-TPjm_ZR06_9zwaE1Gc', this)">COP NOW 🛒</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 5: Tactical Black Cargos -->
+            <!-- Item 5: Heavyweight Zip-Through Hoodie -->
             <div class="product-card animate-on-scroll">
-                <span class="badge badge-dark">ARCHIVE 🏴</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80', 'Tactical Multi-Pocket Cargos')">
-                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Tactical Black Cargos">
+                <div class="product-img-container" onclick="openLightbox('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQAHpbqgv2MxfyQDIe29_TQ-dw5F4I9fr0DbucqgNVfCncGrG81lLgoajw0NE-U4Cus831fLi-dxq-pdk8', 'Heavyweight Zip-Through Hoodie')">
+                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQAHpbqgv2MxfyQDIe29_TQ-dw5F4I9fr0DbucqgNVfCncGrG81lLgoajw0NE-U4Cus831fLi-dxq-pdk8" alt="Full Zip Hoodie">
                     <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80', 'Tactical Multi-Pocket Cargos')">Tactical Black Cargos</h3>
-                    <p class="product-desc">Heavy twill utility cargo pants with adjustable ankles and 8 pockets.</p>
+                    <h3 class="product-name" onclick="openLightbox('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQAHpbqgv2MxfyQDIe29_TQ-dw5F4I9fr0DbucqgNVfCncGrG81lLgoajw0NE-U4Cus831fLi-dxq-pdk8', 'Heavyweight Zip-Through Hoodie')">Heavyweight Zip-Through Hoodie</h3>
+                    <p class="product-desc">Double-layered oversized hood with custom matte black metal hardware.</p>
                     <div class="size-selector">
                         <button class="size-btn active" onclick="selectSize(this)">S</button>
                         <button class="size-btn" onclick="selectSize(this)">M</button>
@@ -188,286 +139,14 @@
                     </div>
                     <div class="product-footer">
                         <div class="price-tag"><span class="currency">$</span>92.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Tactical Black Cargos', 92.00, 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 6: Baggy Distressed Denim -->
-            <div class="product-card animate-on-scroll">
-                <span class="badge badge-red">HOT 💥</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80', 'Baggy Distressed Black Denim')">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="Baggy Black Denim">
-                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80', 'Baggy Distressed Black Denim')">Baggy Distressed Denim</h3>
-                    <p class="product-desc">14oz raw black cotton denim with vintage subtle knee distress details.</p>
-                    <div class="size-selector">
-                        <button class="size-btn active" onclick="selectSize(this)">S</button>
-                        <button class="size-btn" onclick="selectSize(this)">M</button>
-                        <button class="size-btn" onclick="selectSize(this)">L</button>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>88.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Baggy Distressed Denim', 88.00, 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 7: Oversized Knit Sweater -->
-            <div class="product-card animate-on-scroll">
-                <span class="badge badge-neon">RESTOCKED 🔄</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit')">
-                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80" alt="Oversized Cable Knit">
-                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80', 'Oversized Cable Knit')">Oversized Knit Sweater</h3>
-                    <p class="product-desc">Heavyweight textured knit. Ultimate cozy comfort energy.</p>
-                    <div class="size-selector">
-                        <button class="size-btn active" onclick="selectSize(this)">S</button>
-                        <button class="size-btn" onclick="selectSize(this)">M</button>
-                        <button class="size-btn" onclick="selectSize(this)">L</button>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>85.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Oversized Knit Sweater', 85.00, 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 8: Drop-Shoulder Tee -->
-            <div class="product-card animate-on-scroll">
-                <span class="badge badge-dark">CORE 🖤</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee')">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Drop-Shoulder Heavy Tee">
-                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80', 'Drop-Shoulder Heavy Tee')">Drop-Shoulder Tee</h3>
-                    <p class="product-desc">Vintage washed 280GSM heavyweight cotton. Laid-back aesthetic fit.</p>
-                    <div class="size-selector">
-                        <button class="size-btn active" onclick="selectSize(this)">S</button>
-                        <button class="size-btn" onclick="selectSize(this)">M</button>
-                        <button class="size-btn" onclick="selectSize(this)">L</button>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>38.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Drop-Shoulder Tee', 38.00, 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 9: Cyber Nylon Track Pants -->
-            <div class="product-card animate-on-scroll">
-                <span class="badge badge-neon">NEW DROP ⚡</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1506629082925-2368c7f76df1?auto=format&fit=crop&w=600&q=80', 'Cyber Black Nylon Track Pants')">
-                    <img src="https://images.unsplash.com/photo-1506629082925-2368c7f76df1?auto=format&fit=crop&w=600&q=80" alt="Cyber Black Nylon Track Pants">
-                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1506629082925-2368c7f76df1?auto=format&fit=crop&w=600&q=80', 'Cyber Black Nylon Track Pants')">Cyber Nylon Track Pants</h3>
-                    <p class="product-desc">Matte black waterproof shell with high-contrast reflective piping accents.</p>
-                    <div class="size-selector">
-                        <button class="size-btn active" onclick="selectSize(this)">S</button>
-                        <button class="size-btn" onclick="selectSize(this)">M</button>
-                        <button class="size-btn" onclick="selectSize(this)">L</button>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>74.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Cyber Nylon Track Pants', 74.00, 'https://images.unsplash.com/photo-1506629082925-2368c7f76df1?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 10: Cyberpunk Black Anorak -->
-            <div class="product-card animate-on-scroll">
-                <span class="badge badge-red">EXCLUSIVE 💎</span>
-                <div class="product-img-container" onclick="openLightbox('https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80', 'Cyberpunk Black Anorak')">
-                    <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80" alt="Cyberpunk Black Anorak">
-                    <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name" onclick="openLightbox('https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80', 'Cyberpunk Black Anorak')">Cyberpunk Black Anorak</h3>
-                    <p class="product-desc">Oversized quarter-zip windbreaker hooded layer for severe weather vibes.</p>
-                    <div class="size-selector">
-                        <button class="size-btn active" onclick="selectSize(this)">S</button>
-                        <button class="size-btn" onclick="selectSize(this)">M</button>
-                        <button class="size-btn" onclick="selectSize(this)">L</button>
-                    </div>
-                    <div class="product-footer">
-                        <div class="price-tag"><span class="currency">$</span>110.00</div>
-                        <button class="btn btn-primary btn-sm" onclick="addToCart('Cyberpunk Black Anorak', 110.00, 'https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80', this)">COP NOW 🛒</button>
+                        <button class="btn btn-primary btn-sm" onclick="addToCart('Heavyweight Zip-Through Hoodie', 92.00, 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQAHpbqgv2MxfyQDIe29_TQ-dw5F4I9fr0DbucqgNVfCncGrG81lLgoajw0NE-U4Cus831fLi-dxq-pdk8', this)">COP NOW 🛒</button>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section>
+    </main>
 
-    <!-- Slide-Out Shopping Bag Drawer -->
-    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
-    <aside id="cart-drawer" class="cart-drawer">
-        <div class="cart-header">
-            <h3>YOUR LOOT <span class="sparkle">🛍️</span></h3>
-            <button class="close-btn" onclick="toggleCart(false)">&times;</button>
-        </div>
-
-        <div class="free-shipping-bar">
-            <div id="shipping-msg">Add $100.00 more for FREE Express Shipping 🚀</div>
-            <div class="progress-line">
-                <div id="shipping-progress" class="progress-fill"></div>
-            </div>
-        </div>
-
-        <div id="cart-items" class="cart-body">
-            <!-- Dynamic Cart Items Injected Here -->
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-summary-line">
-                <span>Subtotal</span>
-                <span id="subtotal-val">$0.00</span>
-            </div>
-            <div class="cart-summary-line">
-                <span>Shipping</span>
-                <span id="shipping-val">$0.00</span>
-            </div>
-            <div class="cart-summary-line cart-total">
-                <span>Total</span>
-                <span id="total-val">$0.00</span>
-            </div>
-            <button class="btn btn-primary btn-block btn-glow" style="margin-top: 1.25rem;" onclick="openCheckout()">
-                <span>Secure the Bag 🔒</span>
-            </button>
-        </div>
-    </aside>
-
-    <!-- Checkout Modal -->
-    <div id="checkout-modal" class="modal-overlay">
-        <div class="checkout-card">
-            <div class="checkout-header">
-                <h3>CHECKOUT PHASE <span class="sparkle">🔐</span></h3>
-                <button class="close-btn" onclick="closeCheckout()">&times;</button>
-            </div>
-            <div class="checkout-body">
-                <div class="checkout-tabs">
-                    <div id="tab-1" class="tab-step active">1. DROP ADDRESS</div>
-                    <div id="tab-2" class="tab-step">2. PAY UP</div>
-                </div>
-
-                <div class="order-preview">
-                    <div class="order-preview-flex">
-                        <span>Total Items: <strong id="modal-item-count">0</strong></span>
-                        <span>Amount: <strong id="modal-total-val" class="highlight-total">$0.00</strong></span>
-                    </div>
-                </div>
-
-                <form onsubmit="processOrder(event)">
-                    <!-- Step 1: Shipping -->
-                    <div id="step-shipping">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" class="form-control" required placeholder="Kai">
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" class="form-control" required placeholder="Cenat">
-                            </div>
-                            <div class="form-group form-full">
-                                <label>Delivery Spot</label>
-                                <input type="text" class="form-control" required placeholder="777 Clout Ave, Apt 4B">
-                            </div>
-                            <div class="form-group">
-                                <label>City</label>
-                                <input type="text" class="form-control" required placeholder="Los Angeles">
-                            </div>
-                            <div class="form-group">
-                                <label>Zip Code</label>
-                                <input type="text" class="form-control" required placeholder="90210">
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="goToPayment()">
-                            <span>Proceed to Payment ➔</span>
-                        </button>
-                    </div>
-
-                    <!-- Step 2: Payment -->
-                    <div id="step-payment" style="display: none;">
-                        <div class="pay-options">
-                            <div class="pay-option selected" onclick="setPayMethod(this)">💳 Card</div>
-                            <div class="pay-option" onclick="setPayMethod(this)">🅿️ PayPal</div>
-                            <div class="pay-option" onclick="setPayMethod(this)">🍎 Apple Pay</div>
-                        </div>
-                        <div class="form-group">
-                            <label>Card Number</label>
-                            <input type="text" class="form-control" placeholder="4532 •••• •••• 8900" maxlength="19">
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Expiry Date</label>
-                                <input type="text" class="form-control" placeholder="MM/YY">
-                            </div>
-                            <div class="form-group">
-                                <label>CVC</label>
-                                <input type="text" class="form-control" placeholder="123" maxlength="4">
-                            </div>
-                        </div>
-                        <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
-                            <button type="button" class="btn btn-glass" style="flex: 1;" onclick="backToShipping()">Back</button>
-                            <button type="submit" class="btn btn-primary" style="flex: 2;">
-                                <span>Confirm & Pay ✨</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-   <!-- Item 3: Acid Wash Cyber Hoodie -->
-<div class="product-card animate-on-scroll">
-    <span class="badge badge-red">SELLING FAST ⏳</span>
-    <div class="product-img-container" onclick="openLightbox('https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', 'Acid Wash Cyber Hoodie')">
-        <img src="https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg" alt="Acid Wash Hoodie">
-        <div class="img-overlay-blur"><span>QUICK VIEW 👁️</span></div>
-    </div>
-    <div class="product-info">
-        <h3 class="product-name" onclick="openLightbox('https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', 'Acid Wash Cyber Hoodie')">Acid Wash Cyber Hoodie</h3>
-        <p class="product-desc">Vintage washed charcoal black with drop shoulders and thumbhole cuffs.</p>
-        <div class="size-selector">
-            <button class="size-btn active" onclick="selectSize(this)">S</button>
-            <button class="size-btn" onclick="selectSize(this)">M</button>
-            <button class="size-btn" onclick="selectSize(this)">L</button>
-        </div>
-        <div class="product-footer">
-            <div class="price-tag"><span class="currency">$</span>85.00</div>
-            <button class="btn btn-primary btn-sm" onclick="addToCart('Acid Wash Cyber Hoodie', 85.00, 'https://img.ltwebstatic.com/images3_pi/2024/10/15/cd/1728961238ea01405838d6ef18cea0c2053e4ef67a_thumbnail_750x999.jpg', this)">COP NOW 🛒</button>
-        </div>
-    </div>
-</div>
-    <!-- Image Lightbox Modal -->
-    <div id="image-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content" alt="Product Preview">
-        <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-<!-- Search Bar -->
-<div class="search-container animate-on-scroll">
-    <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input 
-            type="text" 
-            id="search-input" 
-            class="search-input" 
-            placeholder="Search hoodies, cargos, tees..." 
-            oninput="filterProducts()"
-        >
-        <button id="clear-search" class="clear-search-btn" onclick="clearSearch()" style="display: none;">&times;</button>
-    </div>
-</div>
     <script src="script.js"></script>
 </body>
 </html>
