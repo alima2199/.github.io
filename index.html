@@ -454,7 +454,20 @@
         <img id="lightbox-img" class="lightbox-content" alt="Product Preview">
         <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
-
+<!-- Search Bar -->
+<div class="search-container animate-on-scroll">
+    <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Search hoodies, cargos, tees..." 
+            oninput="filterProducts()"
+        >
+        <button id="clear-search" class="clear-search-btn" onclick="clearSearch()" style="display: none;">&times;</button>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
